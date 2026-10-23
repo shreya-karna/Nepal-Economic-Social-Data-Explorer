@@ -1,14 +1,86 @@
 {
  "retrieved": "2026-10-23",
  "indicators": {
-  "cpi": {"name":"Consumer inflation (annual average)","category":"Economic","unit":"%","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Annual average year-on-year change in the Consumer Price Index."},
-  "gdp": {"name":"Real GDP growth","category":"Economic","unit":"%","frequency":"annual (fiscal year)","publisher":"National Statistics Office","url":"https://data.nsonepal.gov.np/en/","method":"Annual % change in GDP at constant prices. Recent years are preliminary and get revised."},
-  "rem": {"name":"Remittance inflows","category":"Economic","unit":"Rs bn","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Total workers' remittance inflow in NPR billions. FY2024/25 back-calculated from the reported 37.1% rise to FY2025/26."},
-  "res": {"name":"Gross foreign exchange reserves","category":"Economic","unit":"US$ bn","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Gross reserves in US dollars. FY2025/26 is mid-June 2026; FY2024/25 is mid-July 2025."},
-  "td": {"name":"Merchandise trade deficit","category":"Economic","unit":"Rs bn","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Imports minus exports of goods in NPR billions. FY2024/25 back-calculated from the reported 16.6% rise."},
-  "tou": {"name":"Tourist arrivals","category":"Social","unit":"thousand","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank, citing Nepal Tourism Board","url":"https://www.nrb.org.np/nsdp/","method":"International visitor arrivals. FY2024/25 back-calculated from the reported 0.95% rise."},
-  "pov": {"name":"Population below national poverty line","category":"Social","unit":"%","frequency":"survey years","publisher":"National Statistics Office (NLSS)","url":"https://data.nsonepal.gov.np/en/","method":"Share below the national poverty line from household surveys. Surveys are years apart."},
-  "lit": {"name":"Literacy rate (age 5+)","category":"Social","unit":"%","frequency":"census years","publisher":"National Statistics Office (Census)","url":"https://data.nsonepal.gov.np/en/","method":"Share of people aged 5+ able to read and write."},
-  "pop": {"name":"Total population","category":"Social","unit":"million","frequency":"census years","publisher":"National Statistics Office (Census)","url":"https://data.nsonepal.gov.np/en/","method":"Enumerated population from the decennial census."}
+  "cpi": {
+   "name": "Consumer inflation (annual average)",
+   "category": "Economic",
+   "unit": "%",
+   "frequency": "annual (fiscal year)",
+   "publisher": "Nepal Rastra Bank",
+   "url": "https://www.nrb.org.np/nsdp/",
+   "method": "Annual average y-o-y change in the Consumer Price Index. FY2021/22 to FY2025/26 verified against NRB figures (FY2021/22 and FY2022/23 as cited by ADB)."
+  },
+  "gdp": {
+   "name": "Real GDP growth",
+   "category": "Economic",
+   "unit": "%",
+   "frequency": "annual (fiscal year)",
+   "publisher": "National Statistics Office",
+   "url": "https://data.nsonepal.gov.np/en/",
+   "method": "Annual % change in real GDP. FY2023/24 (3.67%, revised) and FY2024/25 (4.61%, estimate) are from NRB's FY2024/25 report; the preliminary FY2023/24 estimate was 3.87%. Earlier years are unverified."
+  },
+  "rem": {
+   "name": "Remittance inflows",
+   "category": "Economic",
+   "unit": "Rs bn",
+   "frequency": "annual (fiscal year)",
+   "publisher": "Nepal Rastra Bank",
+   "url": "https://www.nrb.org.np/nsdp/",
+   "method": "Total workers' remittance inflow in NPR billions. 'verified' = value stated in an NRB release (FY2023/24, FY2025/26). 'derived' = back-calculated from NRB's reported growth rates (FY2022/23 and FY2021/22 from FY2023/24 growth of 16.5% and the prior year's 23.2%; FY2024/25 from FY2025/26 growth of 37.1%). Check against the NRB annual tables."
+  },
+  "res": {
+   "name": "Gross foreign exchange reserves",
+   "category": "Economic",
+   "unit": "US$ bn",
+   "frequency": "annual (fiscal year)",
+   "publisher": "Nepal Rastra Bank",
+   "url": "https://www.nrb.org.np/nsdp/",
+   "method": "Gross foreign exchange reserves in US$ bn from NRB releases: mid-July 2023, mid-July 2024, mid-July 2025. FY2025/26 is the mid-June 2026 figure (the annual mid-July 2026 US$ figure was not checked), so its date basis differs slightly."
+  },
+  "td": {
+   "name": "Merchandise trade deficit",
+   "category": "Economic",
+   "unit": "Rs bn",
+   "frequency": "annual (fiscal year)",
+   "publisher": "Nepal Rastra Bank",
+   "url": "https://www.nrb.org.np/nsdp/",
+   "method": "Imports minus exports of goods in NPR billions, from NRB annual macroeconomic reports. FY2022/23 is derived from the reported 1.0% fall in FY2023/24."
+  },
+  "tou": {
+   "name": "Tourist arrivals",
+   "category": "Social",
+   "unit": "thousand",
+   "frequency": "annual (fiscal year)",
+   "publisher": "Nepal Rastra Bank, citing Nepal Tourism Board",
+   "url": "https://www.nrb.org.np/nsdp/",
+   "method": "International visitor arrivals from NRB annual reports (citing Nepal Tourism Board), converted to thousands."
+  },
+  "pov": {
+   "name": "Population below national poverty line",
+   "category": "Social",
+   "unit": "%",
+   "frequency": "survey years",
+   "publisher": "National Statistics Office (NLSS)",
+   "url": "https://data.nsonepal.gov.np/en/",
+   "method": "Share below the national poverty line, household surveys. 20.27% (NLSS 2022/23, reported by NSO) is verified; earlier survey values are unverified."
+  },
+  "lit": {
+   "name": "Literacy rate (age 5+)",
+   "category": "Social",
+   "unit": "%",
+   "frequency": "census years",
+   "publisher": "National Statistics Office (Census)",
+   "url": "https://data.nsonepal.gov.np/en/",
+   "method": "Share of people aged 5+ able to read and write. Census 2021 (76.2%) verified; some outlets report 76.3%. Earlier censuses are unverified."
+  },
+  "pop": {
+   "name": "Total population",
+   "category": "Social",
+   "unit": "million",
+   "frequency": "census years",
+   "publisher": "National Statistics Office (Census)",
+   "url": "https://data.nsonepal.gov.np/en/",
+   "method": "Enumerated population from the decennial census: 23,151,423 (2001), 26,494,504 (2011), 29,164,578 (2021)."
+  }
  }
 }

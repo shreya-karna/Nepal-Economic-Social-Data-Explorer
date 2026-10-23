@@ -67,7 +67,7 @@ Pushing to `main` redeploys both services. To update data, edit `data/indicators
 - **Build can't find `requirements.txt`:** use `backend/requirements.txt` in the build command.
 
 ## Data caveat
-Values marked `approximate` in `data/indicators.csv` were compiled from memory of published releases and must be verified against the linked NSO / NRB portals before being cited. `verified` values match Nepal Rastra Bank releases for FY2024/25 and FY2025/26. See `data/README.md`.
+Each value carries a confidence flag: `verified` (stated in an NRB/NSO release), `derived` (back-calculated from a reported growth rate) or `approximate` (not yet checked: CPI 2018/19-2020/21, GDP 2019/20-2022/23, poverty before 2022/23, literacy 2001 and 2011). See `data/README.md`.
 
 ## Limitations
 Small curated dataset; GDP, poverty, literacy and population need checking; fiscal years are plotted at their starting calendar year; no authentication or database (not needed at this scale).

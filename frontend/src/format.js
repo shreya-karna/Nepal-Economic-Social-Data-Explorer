@@ -13,6 +13,6 @@ export function findings(ind) {
     ? `${ind.name} moved from ${fmt(first.value, "%")} (${first.period}) to ${fmt(last.value, "%")} (${last.period}), a change of ${s.change_abs >= 0 ? "+" : ""}${s.change_abs.toFixed(1)} percentage points.`
     : `${ind.name} went from ${fmt(first.value, ind.unit)} (${first.period}) to ${fmt(last.value, ind.unit)} (${last.period})${s.change_pct != null ? `, ${s.change_pct >= 0 ? "up" : "down"} ${Math.abs(s.change_pct).toFixed(0)}%` : ""}${s.cagr_pct != null ? ` (about ${s.cagr_pct}% a year)` : ""}.`;
   t += ` Highest value: ${fmt(peak.value, ind.unit)} in ${peak.period}.`;
-  if (s.has_approximate) t += " Includes approximate values.";
+  if (s.has_approximate) t += " Includes derived or approximate values.";
   return t;
 }
