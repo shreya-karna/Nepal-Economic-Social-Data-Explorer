@@ -36,8 +36,35 @@ pytest
 cd frontend  && npm install && npm run dev   # http://localhost:5173
 ```
 
-## Deploy
-Frontend on Vercel (set `VITE_API_BASE_URL` to the public backend URL). Backend on any Python host (Render, Railway, Fly.io): start with `uvicorn app.main:app --host 0.0.0.0 --port $PORT`, include the `data/` folder, and set `CORS_ORIGINS` to the deployed frontend origin.
+## Deployment
+
+The app is deployed as two services: the React frontend on Vercel and the FastAPI backend on Render.
+
+| Part | Platform | URL |
+|---|---|---|
+| Frontend | Vercel | https://nepal-economic-social-data-explorer.vercel.app/ |
+| Backend API | Render | https://nepal-economic-social-data-explorer-api.onrender.com |
+
+### Backend (Render)
+1. Create a Web Service from this GitHub repo and leave the root directory empty, because the API reads `data/` from the repo root.
+2. Build command: `pip install -r backend/requirements.txt`
+3. Start command: `cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. Environment variables:
+   - `PYTHON_VERSION` = `3.12.3`
+   - `CORS_ORIGINS` = the frontend URL, with no trailing slash (comma-separate several)
+5. Check `/api/health` returns `{"status":"ok"}`.
+
+### Frontend (Vercel)
+1. Import the same repo and set the root directory to `frontend` (Vite, build `npm run build`, output `dist`).
+2. Environment variable: `VITE_API_BASE_URL` = the Render URL, with no trailing slash. Vite embeds this at build time, so redeploy after changing it. Never put secrets in `VITE_` variables.
+
+### Updating
+Pushing to `main` redeploys both services. To update data, edit `data/indicators.csv` and push.
+
+### Troubleshooting
+- **"Could not load data":** usually a CORS mismatch. `CORS_ORIGINS` must exactly match the frontend URL.
+- **Long first load:** the free backend instance is waking from sleep.
+- **Build can't find `requirements.txt`:** use `backend/requirements.txt` in the build command.
 
 ## Data caveat
 Values marked `approximate` in `data/indicators.csv` were compiled from memory of published releases and must be verified against the linked NSO / NRB portals before being cited. `verified` values match Nepal Rastra Bank releases for FY2024/25 and FY2025/26. See `data/README.md`.
