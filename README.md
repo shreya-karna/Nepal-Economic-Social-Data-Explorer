@@ -33,7 +33,7 @@ uvicorn app.main:app --reload          # http://127.0.0.1:8000/docs
 pytest
 
 # frontend (new terminal)
-cd frontend && cp .env.example .env && npm install && npm run dev   # http://localhost:5173
+cd frontend  && npm install && npm run dev   # http://localhost:5173
 ```
 
 ## Deploy
