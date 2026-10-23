@@ -1,0 +1,14 @@
+{
+ "retrieved": "2026-10-23",
+ "indicators": {
+  "cpi": {"name":"Consumer inflation (annual average)","category":"Economic","unit":"%","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Annual average year-on-year change in the Consumer Price Index."},
+  "gdp": {"name":"Real GDP growth","category":"Economic","unit":"%","frequency":"annual (fiscal year)","publisher":"National Statistics Office","url":"https://data.nsonepal.gov.np/en/","method":"Annual % change in GDP at constant prices. Recent years are preliminary and get revised."},
+  "rem": {"name":"Remittance inflows","category":"Economic","unit":"Rs bn","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Total workers' remittance inflow in NPR billions. FY2024/25 back-calculated from the reported 37.1% rise to FY2025/26."},
+  "res": {"name":"Gross foreign exchange reserves","category":"Economic","unit":"US$ bn","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Gross reserves in US dollars. FY2025/26 is mid-June 2026; FY2024/25 is mid-July 2025."},
+  "td": {"name":"Merchandise trade deficit","category":"Economic","unit":"Rs bn","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank","url":"https://www.nrb.org.np/nsdp/","method":"Imports minus exports of goods in NPR billions. FY2024/25 back-calculated from the reported 16.6% rise."},
+  "tou": {"name":"Tourist arrivals","category":"Social","unit":"thousand","frequency":"annual (fiscal year)","publisher":"Nepal Rastra Bank, citing Nepal Tourism Board","url":"https://www.nrb.org.np/nsdp/","method":"International visitor arrivals. FY2024/25 back-calculated from the reported 0.95% rise."},
+  "pov": {"name":"Population below national poverty line","category":"Social","unit":"%","frequency":"survey years","publisher":"National Statistics Office (NLSS)","url":"https://data.nsonepal.gov.np/en/","method":"Share below the national poverty line from household surveys. Surveys are years apart."},
+  "lit": {"name":"Literacy rate (age 5+)","category":"Social","unit":"%","frequency":"census years","publisher":"National Statistics Office (Census)","url":"https://data.nsonepal.gov.np/en/","method":"Share of people aged 5+ able to read and write."},
+  "pop": {"name":"Total population","category":"Social","unit":"million","frequency":"census years","publisher":"National Statistics Office (Census)","url":"https://data.nsonepal.gov.np/en/","method":"Enumerated population from the decennial census."}
+ }
+}
